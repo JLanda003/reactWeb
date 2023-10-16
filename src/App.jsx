@@ -1,7 +1,8 @@
 import React from 'react'
 // import Text from './components/Texto';
-import Contador from './components/Contador';
+// import Contador from './components/Contador';
 import './styles/App.css'
+import Pokemones from './components/Pokemones';
 // import ListaNombre from './components/ListaNombre'
 
 // class App extends React.Component{
@@ -19,8 +20,9 @@ const App = () => {
         apellido="Landa"
         edad="23" />
         <ListaNombre />
-      */}
         <Contador /> 
+      */}
+      <Pokemones />
       </div>
     )
 }
