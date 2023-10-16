@@ -1,8 +1,8 @@
 import React from 'react'
 // import Text from './components/Texto';
-// import Contador from './components/Contador';
+import Contador from './components/Contador';
 import './styles/App.css'
-import ListaNombre from './components/ListaNombre'
+// import ListaNombre from './components/ListaNombre'
 
 // class App extends React.Component{
 //   render(){
@@ -18,8 +18,9 @@ const App = () => {
         name="Joshua"
         apellido="Landa"
         edad="23" />
-        <Contador /> */}
         <ListaNombre />
+      */}
+        <Contador /> 
       </div>
     )
 }
