@@ -1,9 +1,10 @@
 import React from 'react'
-// import Text from './components/Texto';
-// import Contador from './components/Contador';
+import Text from './components/Texto';
+import Contador from './components/Contador';
 import './styles/App.css'
 import Pokemones from './components/Pokemones';
-// import ListaNombre from './components/ListaNombre'
+import ListaNombre from './components/ListaNombre'
+import Referencia from './components/Referencia';
 
 // class App extends React.Component{
 //   render(){
@@ -14,15 +15,18 @@ import Pokemones from './components/Pokemones';
 const App = () => {
   return(
       <div className='container'>
-        {/* <p>Hola soy un texto</p>
         <Text
         name="Joshua"
         apellido="Landa"
         edad="23" />
+        <hr />
         <ListaNombre />
-        <Contador /> 
-      */}
-      <Pokemones />
+        <hr />
+        <Contador />
+        <hr />
+        <Pokemones />
+        <hr />
+        <Referencia />
       </div>
     )
 }
