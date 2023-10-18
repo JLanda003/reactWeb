@@ -1,10 +1,11 @@
 import React from 'react'
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css' // Se debe de importar los css de bootstrap
+import CrudApp from './components/crud/CrudApp'
 // import Text from './components/Texto';
 // import Contador from './components/Contador';
 // import Bootstrap from './components/Bootstrap';
-import NavScrollExample from './components/Navbar'
+// import NavScrollExample from './components/Navbar'
 // import Pokemones from './components/Pokemones';
 // import Estilos from './components/Estilos';
 // import ListaNombre from './components/ListaNombre'
@@ -33,8 +34,9 @@ const App = () => {
         <Referencia />
         <Estilos />
         // <Bootstrap /> Antigua forma
-        */}
         <NavScrollExample />
+        */}
+        <CrudApp />
       </div>
     )
 }
