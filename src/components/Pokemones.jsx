@@ -1,29 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
+import usePokemon from '../hooks/usePokemon';
 
 const Pokemones = () => {
-
-  const [pokemones, setPokemones] = useState([]);
-  const [anterior, setAnterior] = useState(null);
-  const [siguiente, setSiguiente] = useState(null);
   const [actual, setActual] = useState('https://pokeapi.co/api/v2/ability/?limit=10&offset=0');
-
-  useEffect(() => {
-    const obtenerPokemones = async () =>{
-      const response = await fetch(actual);
-      const data = await response.json();
-
-      console.log(data);
-
-      setPokemones(data.results);
-      setAnterior(data.previous);
-      setSiguiente(data.next);
-
-    }
-    
-    obtenerPokemones();
-  }, [actual]);
+  const { pokemones, loading, anterior, siguiente } = usePokemon(actual);
 
   return (
+    loading ? 
+      <p>Cargando...</p>
+    :
     <div>
       <ul>
       {

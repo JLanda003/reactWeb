@@ -1,10 +1,10 @@
 import React from 'react'
-import Text from './components/Texto';
-import Contador from './components/Contador';
+// import Text from './components/Texto';
+// import Contador from './components/Contador';
 import './styles/App.css'
 import Pokemones from './components/Pokemones';
-import ListaNombre from './components/ListaNombre'
-import Referencia from './components/Referencia';
+// import ListaNombre from './components/ListaNombre'
+// import Referencia from './components/Referencia';
 
 // class App extends React.Component{
 //   render(){
@@ -15,7 +15,7 @@ import Referencia from './components/Referencia';
 const App = () => {
   return(
       <div className='container'>
-        <Text
+        {/* <Text
         name="Joshua"
         apellido="Landa"
         edad="23" />
@@ -23,10 +23,10 @@ const App = () => {
         <ListaNombre />
         <hr />
         <Contador />
-        <hr />
+        <hr /> */}
         <Pokemones />
-        <hr />
-        <Referencia />
+        {/* <hr />
+        <Referencia /> */}
       </div>
     )
 }
