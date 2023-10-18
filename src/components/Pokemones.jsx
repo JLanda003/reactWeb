@@ -1,13 +1,12 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useState } from 'react'
 import usePokemon from '../hooks/usePokemon';
 
 const Pokemones = () => {
   const [actual, setActual] = useState('https://pokeapi.co/api/v2/ability/?limit=10&offset=0');
   const { pokemones, loading, anterior, siguiente } = usePokemon(actual);
-
   return (
     loading ? 
-      <p>Cargando...</p>
+    <p>Cargando...</p>
     :
     <div>
       <ul>
