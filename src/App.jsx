@@ -2,7 +2,8 @@ import React from 'react'
 // import Text from './components/Texto';
 // import Contador from './components/Contador';
 import './styles/App.css'
-import Pokemones from './components/Pokemones';
+// import Pokemones from './components/Pokemones';
+import Estilos from './components/Estilos';
 // import ListaNombre from './components/ListaNombre'
 // import Referencia from './components/Referencia';
 
@@ -23,10 +24,11 @@ const App = () => {
         <ListaNombre />
         <hr />
         <Contador />
-        <hr /> */}
+        <hr /> 
         <Pokemones />
-        {/* <hr />
+        <hr />
         <Referencia /> */}
+        <Estilos />
       </div>
     )
 }
