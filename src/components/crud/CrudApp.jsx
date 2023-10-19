@@ -13,6 +13,7 @@ const db = [
 const CrudApp = () => {
 
   const [equipos, setEquipos] = useState(db);
+  const [editData, setEditData] = useState(null);
 
   // insercion de datos
   const addEquipo = equipo =>{
@@ -22,19 +23,30 @@ const CrudApp = () => {
     ])
   }
 
-  return (
-    <>
+  const editEquipo = equipo => {
+    const newEquipos = equipos.map(el => el.id === equipo.id ? equipo : el)
+    setEquipos(newEquipos)
+    setEditData(null)
+  }
+
+  return (<>
 
     <h2>Crud Equipos de futbol</h2>
 
     {/* Formulario para los datos */}
-    <CrudForm addEquipo={addEquipo}/>
+    <CrudForm
+      addEquipo={addEquipo}
+      editData={editData}
+      editEquipo={editEquipo}
+    />
 
     {/* Mostrar la informacion, targetas, tabla, vista, etc.*/}
-    <CrudTable equipos={equipos}/>
+    <CrudTable
+    equipos={equipos}
+    setEditData={setEditData}
+    />
 
-    </>
-  )
+  </>)
 }
 
 export default CrudApp
