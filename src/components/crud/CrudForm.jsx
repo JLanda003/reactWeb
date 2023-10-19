@@ -47,20 +47,32 @@ const CrudForm = ({ addEquipo, editData, editEquipo }) => {
     });
   }
   
-  return (
-  <>
+  return (<>
 
     <form className='m-3' onSubmit={handleSubmit}>
       <label htmlFor="equipo">Equipo:</label>
-      <input type="text" name='equipo' onChange={handleChange} value={formData.equipo}/>
+      <input
+        type="text"
+        name='equipo'
+        onChange={handleChange}
+        value={formData.equipo} />
       <label htmlFor="pais">Pais:</label>
-      <input type="text" name='pais' onChange={handleChange} value={formData.pais}/>
-      <input type="submit" value="Guardar" className='btn btn-success mx-1'/>
-      <input type="reset" value="Cancelar" className='btn btn-danger mx-1'/>
+      <input
+        type="text"
+        name='pais'
+        onChange={handleChange}
+        value={formData.pais} />
+      <input
+        type="submit"
+        value="Guardar"
+        className='btn btn-success mx-1' />
+      <input
+        type="reset"
+        value="Cancelar"
+        className='btn btn-danger mx-1' />
     </form>
 
-  </>
-  )
+  </>)
 }
 
 export default CrudForm

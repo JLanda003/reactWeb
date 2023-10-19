@@ -1,7 +1,8 @@
 import React from 'react'
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css' // Se debe de importar los css de bootstrap
-import CrudApp from './components/crud/CrudApp'
+import CrudApi from './components/crud/CrudApi'
+// import CrudApp from './components/crud/CrudApp'
 // import Text from './components/Texto';
 // import Contador from './components/Contador';
 // import Bootstrap from './components/Bootstrap';
@@ -35,8 +36,9 @@ const App = () => {
         <Estilos />
         // <Bootstrap /> Antigua forma
         <NavScrollExample />
-        */}
         <CrudApp />
+        */}
+        <CrudApi />
       </div>
     )
 }
