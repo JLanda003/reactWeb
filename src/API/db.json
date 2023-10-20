@@ -1,28 +1,18 @@
 {
-  "equipos" : [
-    { 
+  "equipos": [
+    {
       "id": 1,
-      "equipo": "Barcelona",
+      "equipo": "Madrid",
       "pais": "España"
     },
-    { 
-      "id": 2, 
-      "equipo": "Guadalajara", 
-      "pais": "México"
-    },
-    { 
-      "id": 3, 
-      "equipo": "Boca JR", 
+    {
+      "id": 3,
+      "equipo": "Boca JR",
       "pais": "Argentina"
     },
-    { 
-      "id": 4, 
-      "equipo": "Mancheser City", 
-      "pais": "Inglaterra"
-    },
-    { 
-      "id": 5, 
-      "equipo": "Real Madrid", 
+    {
+      "id": 1697773349893,
+      "equipo": "Barcelona",
       "pais": "España"
     }
   ]

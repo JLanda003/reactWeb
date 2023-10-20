@@ -11,7 +11,7 @@ const CrudApi = () => {
   const [editData, setEditData] = useState(null);
   const [equipos, setEquipos] = useState([]);
 
-  console.log(API);
+  // console.log(API);
 
   useEffect(() => {
     // fetch('http://localhost:3004/equipos')
@@ -26,17 +26,43 @@ const CrudApi = () => {
 
   // insercion de datos
   const addEquipo = equipo => {
+    const options = {
+      body : equipo
+    }
 
+    API.post('equipos', options).then(response => {
+      if (!response.error) setEquipos([...equipos, equipo])
+    });
   };
 
   //Editar equipos
   const editEquipo = equipo => {
+    const options = {
+      body : equipo
+    }
 
+    API.put('equipos', options, equipo['id']).then(response => {
+      if (!response.error) {
+        const newEquipos = equipos.map(el => el.id === equipo.id ? equipo : el)
+        setEquipos(newEquipos)
+        setEditData(null)
+      }
+    });
   };
 
   //Eliminar equipos
   const deleteEquipo = id => {
+    const isDelete =
+      window.confirm(`¿Desea eliminar el registro con id: ${id}?`);
 
+    if(isDelete){
+      API.delT('equipos', id).then(response => {
+        if(!response.error){
+          const newEquipos = equipos.filter( el => el.id !== id );
+          setEquipos(newEquipos);
+        }
+      });
+    }
   };
 
   return (<>
