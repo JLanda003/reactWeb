@@ -51,17 +51,21 @@ const CrudForm = ({ addEquipo, editData, editEquipo }) => {
 
     <form className='m-3' onSubmit={handleSubmit}>
       <label htmlFor="equipo">Equipo:</label>
+      <br />
       <input
         type="text"
         name='equipo'
         onChange={handleChange}
         value={formData.equipo} />
+      <br />
       <label htmlFor="pais">Pais:</label>
+      <br />
       <input
         type="text"
         name='pais'
         onChange={handleChange}
         value={formData.pais} />
+      <br />
       <input
         type="submit"
         value="Guardar"
