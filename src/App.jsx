@@ -13,6 +13,7 @@ import Estilos from './components/Estilos';
 import ListaNombre from './components/ListaNombre';
 import Referencia from './components/Referencia';
 import Menu from './components/Menu';
+import ContactForm from './components/ContactForm';
 // import { Container } from 'react-bootstrap';
 
 // class App extends React.Component{
@@ -36,6 +37,7 @@ const App = () => {
           <Route path='/navscroll' element={ <NavScrollExample /> } />
           <Route path='/crudapp' element={ <CrudApp /> } />
           <Route path='/crudapi' element={ <CrudApi /> } />
+          <Route path='/contactform' element={ <ContactForm /> } />
           <Route path='*' element={<h2>Curso React</h2>} />
         </Routes>
       </div>
