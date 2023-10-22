@@ -4,6 +4,7 @@ const Menu = () => {
   return (
   <div className='d-flex flex-column justify-content-start'>
     <h2 className='text-center'>Menu</h2>
+      <Link to='/modales' className='btn btn-primary m-1'>Modales</Link>
       <Link to='/contactform' className='btn btn-primary m-1'>Validacion Formulario</Link>
       <Link to='/crudapi' className='btn btn-primary m-1'>Crud Api</Link>
       <Link to='/crudapp' className='btn btn-primary m-1'>Crud App</Link>
