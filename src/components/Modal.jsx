@@ -1,11 +1,17 @@
 import '../styles/modal.css';
 
-const Modal = () => {
+const Modal = ({ isOpen, onClose, children }) => {
   return (
-    <div className='modal-container'>
+    <div 
+      className='modal-container' 
+      style={ { display : isOpen ? 'grid' : 'none' } }
+    >
       <div className='modal-body'>
-        <button className='modal-close'>X</button>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button 
+          className='modal-close' 
+          onClick={onClose}
+        >X</button>
+        {children}
       </div>
     </div>
   )
