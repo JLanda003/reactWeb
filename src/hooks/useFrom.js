@@ -13,11 +13,28 @@ const useForm = ( initialData, onValidate ) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const err = onValidate(form);
-
-    if (err === null){
-      console.log('Enviando formulario...');
-    } else {
-      setErrors(err);
+    setErrors(err);
+    
+    if (Object.keys(err).length === 0){
+      setLoading(true);
+      fetch("https://formsubmit.co/ajax/joshualv46@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(form)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          data.success === 'true' && setForm(initialData);
+          setLoading(false);
+        })
+        .catch(error => {
+          console.log(error);
+          setLoading(false);
+        });
     }
   }
 
