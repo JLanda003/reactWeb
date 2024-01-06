@@ -1,6 +1,6 @@
 const Text = (props) => {
   return(
-      <p>Hola soy {props.name} {props.apellido} y tengo {props.edad} años</p>
+    <p>Hola soy {props.name} {props.apellido} y tengo {props.edad} años</p>
   )
 }
 

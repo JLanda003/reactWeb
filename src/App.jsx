@@ -15,6 +15,7 @@ import Referencia from './components/Referencia';
 import Menu from './components/Menu';
 import ContactForm from './components/ContactForm';
 import Modales from './components/Modales';
+import ToDoList from './components/ToDoList';
 // import { Container } from 'react-bootstrap';
 
 // class App extends React.Component{
@@ -29,6 +30,7 @@ const App = () => {
       <Menu />
       <div className='container'>
         <Routes>
+          <Route path='/todolist' element={ <ToDoList /> } />
           <Route path='/modales' element={ <Modales /> } />
           <Route path='/condator' element={ <Contador /> } />
           <Route path='/listanombre' element={ <ListaNombre /> } />
